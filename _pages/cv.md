@@ -9,8 +9,8 @@ redirect_from:
 
 {% include base_path %}
 
-Education
-======
+<h3>Education</h3>
+
 <h4>Bowling Green State University</h4>
 <ul>
     <li>Ph.D., Statistics (2020-expected graduation: 2024).</li>
@@ -33,9 +33,7 @@ Education
     <li>B.S., Mathematics (2013).</li>
 </ul>
 
-
-Research Interests
-======
+<h3>Research Interests</h3>
 <ul>
     <li>Functional Data Analysis</li>
     <li>Longitudinal Data Analysis</li>
