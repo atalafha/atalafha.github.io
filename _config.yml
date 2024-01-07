@@ -7,13 +7,13 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Ahmad Talafha"
+title                    : "Ahmad Talafha / Site Title"
 title_separator          : "-"
-name                     : "Ahmad Talafha"
-description              : "PhD Candidate in Statistics at Bowling Green State University"
+name                     : &name "Ahmad Talafha"
+description              : &description "personal description"
 url                      : https://atalafha.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : "atalafha.github.io" # the subpath of your site, e.g. "/blog"
-repository               : "/atalafha.github.io"
+baseurl                  : "" # the subpath of your site, e.g. "/blog"
+repository               : "academicpages/atalafha.github.io"
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 breadcrumbs              : false # true, false (default)
 words_per_minute         : 160
@@ -80,7 +80,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "Ahmad Talafha"
+  name             : "Your Sidebar Name"
   avatar           : "profile.png"
   bio              : "Your biography for the left-hand sidebar"
   location         : "Location"
@@ -88,7 +88,7 @@ author:
   pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : "http://yourfullgooglescholarurl.com"
   email            :
-  researchgate     :  "https://www.researchgate.net/profile/Ahmad-Talafha"
+  researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
   codepen          :
@@ -96,7 +96,7 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : "atalafha.github.io"
+  github           : "atalafha"
   google_plus      :
   keybase          :
   instagram        :
