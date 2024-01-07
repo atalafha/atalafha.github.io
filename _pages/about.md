@@ -8,9 +8,13 @@ redirect_from:
   - /about.html
 ---
 
+Welcome and Thanks for Visiting!
+======
+Hi, I'm Ahmad Talafha. I'm delighted you're here to explore my work in statistics. On this site, you'll find my research, publications, and a bit about my academic journey. If you have any questions or just want to say hello, feel free to reach out. Enjoy exploring!
+
 Bio
 ======
-I am Ahmad M. Talafha, currently a Ph.D. candidate in Statistics at Bowling Green State University, under the guidance of Dr. John Chen. My academic journey began with a Bachelor of Science in Mathematics from Al-Zaytoonah University of Jordan, followed by two master's degrees - one in Mathematics from Southeast Missouri State University, where I delved into the econometric approach to European Option Valuation, and another in Statistics from Western Michigan University.
+I am currently a Ph.D. candidate in Statistics at Bowling Green State University, under the guidance of Dr. John Chen. My academic journey began with a Bachelor of Science in Mathematics from Al-Zaytoonah University of Jordan, followed by two master's degrees - one in Mathematics from Southeast Missouri State University, where I delved into the econometric approach to European Option Valuation, and another in Statistics from Western Michigan University.
 
 Research Interests
 ======
