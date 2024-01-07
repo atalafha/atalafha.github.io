@@ -11,9 +11,28 @@ redirect_from:
 
 Education
 ======
-* B.S. in GitHub, GitHub University, 2012
-* M.S. in Jekyll, GitHub University, 2014
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
+<h4>Bowling Green State University</h4>
+<ul>
+    <li>Ph.D., Statistics (2020-expected graduation: 2024).</li>
+    <li>Advisor: Dr. John Chen.</li>
+</ul>
+
+<h4>Western Michigan University</h4>
+<ul>
+    <li>M.S., Statistics (2019).</li>
+</ul>
+
+<h4>Southeast Missouri State University</h4>
+<ul>
+    <li>M.S., Mathematics (2017).</li>
+    <li>Master thesis: <em>European Option Valuation: An Econometric Approach</em>.</li>
+</ul>
+
+<h4>Al-Zaytoonah University of Jordan</h4>
+<ul>
+    <li>B.S., Mathematics (2013).</li>
+</ul>
+
 
 Work experience
 ======
