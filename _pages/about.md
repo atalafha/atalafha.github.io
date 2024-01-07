@@ -14,13 +14,12 @@ Hi, I'm Ahmad Talafha. I'm delighted you're here to explore my work in statistic
 
 Bio
 ======
-I am currently a Ph.D. candidate in Statistics at Bowling Green State University, under the guidance of Dr. John Chen. My academic journey began with a Bachelor of Science in Mathematics from Al-Zaytoonah University of Jordan, followed by two master's degrees - one in Mathematics from Southeast Missouri State University, where I delved into the econometric approach to European Option Valuation, and another in Statistics from Western Michigan University.
+I am currently a Ph.D. candidate in Statistics at Bowling Green State University, under the guidance of [Dr. John Chen](https://www.bgsu.edu/arts-and-sciences/mathematics-and-statistics/faculty-and-staff/john-chen.html). My academic journey began with a Bachelor of Science in Mathematics from Al-Zaytoonah University of Jordan, followed by two master's degrees - one in Mathematics from Southeast Missouri State University, where I delved into the econometric approach to European Option Valuation, and another in Statistics from Western Michigan University.
 
 Research Interests
 ======
 
 My research interests are diverse yet focused, spanning functional data analysis, longitudinal data analysis, survival analysis, high-dimensional data analysis, statistical learning, biostatistics, and statistical and econometric modeling. These areas represent my quest to explore and solve complex data-driven problems in various contexts.
-
 
 
 Publications
@@ -36,6 +35,6 @@ As I progress towards completing my Ph.D., I am eager to continue expanding my k
 Contact and Collaboration
 ======
 
-Feel free to reach out to me for any collaborations, academic discussions, or questions about my research at talafha at talafha (at) b g s u (dot) e d u. You can also explore my research and projects on my GitHub profile.
+Feel free to reach out to me for any collaborations, academic discussions, or questions about my research at talafha at talafha (at) b g s u (dot) e d u. You can also explore my research and projects on my GitHub profile. [GitHub profile](atalafha.gitub)
 
 
