@@ -83,9 +83,9 @@ author:
   name             : "Ahmad Talafha"
   avatar           : "profile.png"
   bio              : "PhD Candidate in Statistics at Bowling Green State University"
-  location         : "Location"
+  location         : "Bowling Greem, OH"
   employer         :
-  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
+  #pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : "http://yourfullgooglescholarurl.com"
   email            :
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
