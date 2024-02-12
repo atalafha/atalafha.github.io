@@ -121,9 +121,10 @@ author:
 include:
   - .htaccess
   - _pages
+  - files
+
 
 exclude:
-  - files
   - "*.sublime-project"
   - "*.sublime-workspace"
   - .asset-cache
