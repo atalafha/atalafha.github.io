@@ -11,7 +11,7 @@ redirect_from:
 Bio
 ======
 
-I will be joining the Department of Mathematics at St. Edward's University, Austin, TX, as an Assistant Professor starting in August 2024. I am expected to receive my Ph.D. in Statistics from Bowling Green State University in August 2024, advised by [Dr. John Chen](https://www.bgsu.edu/arts-and-sciences/mathematics-and-statistics/faculty-and-staff/john-chen.html), and hold M.S. degrees in Mathematics and Statistics from Southeast Missouri State University (2017) and Western Michigan University (2019), respectively.
+I will be joining the Department of Mathematics at St. Edward's University, Austin, TX, as an Assistant Professor starting in August 2024. I am expected to receive my Ph.D. in Statistics from Bowling Green State University in August 2024, advised by [Dr. John Chen](https://www.bgsu.edu/arts-and-sciences/mathematics-and-statistics/faculty-and-staff/john-chen.html), and hold M.S. degrees in Mathematics and Statistics from Southeast Missouri State University (2017) and Western Michigan University (2019).
 
 
 
