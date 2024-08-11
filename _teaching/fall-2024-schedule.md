@@ -1,7 +1,7 @@
 ---
 title: "Teaching Schedule - Fall 2024"
 collection: teaching
-permalink: /teaching
+permalink: /teaching/fall-2024-schedule.md
 date: 2024-08-26
 ---
 
