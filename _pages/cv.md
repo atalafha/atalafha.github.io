@@ -13,7 +13,7 @@ redirect_from:
 
 <h4>Bowling Green State University</h4>
 <ul>
-    <li>Ph.D., Statistics (2020-expected graduation: 2024).</li>
+    <li>Ph.D., Statistics (2024).</li>
     <li>Advisor: Dr. John Chen.</li>
 </ul>
 
