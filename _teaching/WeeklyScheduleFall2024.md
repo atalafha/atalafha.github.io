@@ -1,14 +1,8 @@
 ---
-title: "Teaching experience 2"
+title: "Weekly Schedule - Fall 2024"
 collection: teaching
-type: "Workshop"
 permalink: /teaching/WeeklyScheduleFall2024
-venue: "University 1, Department"
-date: 2015-01-01
-location: "City, Country"
 ---
-
-# Weekly Schedule - Fall 2024
 
 <table>
     <tr>
