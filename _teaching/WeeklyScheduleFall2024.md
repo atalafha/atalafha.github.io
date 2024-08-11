@@ -1,5 +1,4 @@
 ---
-title: "Weekly Schedule - Fall 2024"
 collection: teaching
 permalink: /teaching/WeeklyScheduleFall2024
 ---
