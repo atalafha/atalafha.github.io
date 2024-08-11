@@ -11,7 +11,7 @@ redirect_from:
 Bio
 ======
 
-I will be joining the Department of Mathematics at St. Edward's University, Austin, TX, as an Assistant Professor starting in August 2024. I am expected to receive my Ph.D. in Statistics from Bowling Green State University in August 2024, advised by [Dr. John Chen](https://www.bgsu.edu/arts-and-sciences/mathematics-and-statistics/faculty-and-staff/john-chen.html), and hold M.S. degrees in Mathematics and Statistics from Southeast Missouri State University (2017) and Western Michigan University (2019).
+I am an Assistant Professor in the Department of Mathematics at St. Edward's University, Austin, TX. I received my Ph.D. in Statistics from Bowling Green State University in August 2024, advised by  [Dr. John Chen](https://www.bgsu.edu/arts-and-sciences/mathematics-and-statistics/faculty-and-staff/john-chen.html). I also hold M.S. degrees in Mathematics and Statistics from Southeast Missouri State University (2017) and Western Michigan University (2019).
 
 
 
@@ -51,6 +51,6 @@ Publications
 Contact and Collaboration
 ======
 
-Feel free to reach out to me for any collaborations, academic discussions, or questions about my research at talafha at talafha (at) b g s u (dot) e d u. You can also explore my research and projects on my GitHub profile. [GitHub profile](atalafha.gitub)
+Feel free to reach out to me for any collaborations, academic discussions, or questions about my research at atalafha (at) s t e d w a r d s (dot) e d u. You can also explore my research and projects on my GitHub profile. [GitHub profile](atalafha.gitub)
 
 
