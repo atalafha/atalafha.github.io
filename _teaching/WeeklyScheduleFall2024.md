@@ -4,6 +4,38 @@ collection: teaching
 permalink: /teaching/WeeklyScheduleFall2024
 ---
 
+<style>
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    th, td {
+        border: 1px solid #000000;
+        text-align: center;
+        padding: 8px;
+    }
+    th {
+        background-color: #C0C0C0;
+    }
+    .discrete-math {
+        background-color: #FFCCC9;
+    }
+    .applied-stats {
+        background-color: #FFEFBA;
+    }
+    .calculus-lab, .calculus-class {
+        background-color: #B4E1FF;
+    }
+    .office-hours {
+        background-color: #FFDAE9;
+    }
+    .research {
+        background-color: #FFCCC9;
+    }
+</style>
+
+<h1>Weekly Schedule - Fall 2024</h1>
+
 <table>
     <tr>
         <th>Time</th>
@@ -158,5 +190,3 @@ permalink: /teaching/WeeklyScheduleFall2024
         <td></td>
     </tr>
 </table>
-
-
