@@ -1,20 +1,15 @@
 ---
-title: "Teaching experience 1"
+title: "Teaching Schedule - Fall 2024"
 collection: teaching
-type: "Undergraduate course"
-permalink: /teaching/2014-spring-teaching-1
-venue: "University 1, Department"
-date: 2014-01-01
-location: "City, Country"
+permalink: /teaching/fall-2024-schedule
+excerpt: 'Teaching schedule for Fall 2024 including Discrete Mathematics, Calculus I, Applied Statistics, and Research.'
+date: 2024-08-26
 ---
 
-This is a description of a teaching experience. You can use markdown like any other post.
+# Teaching Schedule - Fall 2024
 
-Heading 1
-======
+<iframe src="http://atalafha.github.io/files/teaching_schedule.pdf" width="100%" height="800px">
+    This browser does not support PDFs. Please download the PDF to view it: <a href="http://atalafha.github.io/files/teaching_schedule.pdf">Download PDF</a>.
+</iframe>
 
-Heading 2
-======
-
-Heading 3
-======
+[Download schedule here](http://atalafha.github.io/files/teaching_schedule.pdf)
