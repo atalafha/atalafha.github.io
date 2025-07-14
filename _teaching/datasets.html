@@ -302,10 +302,9 @@ permalink: /teaching/datasets/
             <input type="text" class="search-input" placeholder="Search datasets by name or description..." id="searchInput">
             <div class="filter-tags">
                 <div class="filter-tag active" data-filter="all">All</div>
-                <div class="filter-tag" data-filter="chapter4">Chapter 4</div>
-                <div class="filter-tag" data-filter="chapter5">Chapter 5</div>
-                <div class="filter-tag" data-filter="chapter6">Chapter 6</div>
-                <div class="filter-tag" data-filter="chapter7">Chapter 7</div>
+                <div class="filter-tag" data-filter="statistical">Statistical</div>
+                <div class="filter-tag" data-filter="real-world">Real World</div>
+                <div class="filter-tag" data-filter="simulation">Simulation</div>
                 <div class="filter-tag" data-filter="projects">Projects</div>
             </div>
         </div>
@@ -313,188 +312,120 @@ permalink: /teaching/datasets/
         <!-- Datasets Grid -->
         <div class="datasets-grid" id="datasetsGrid">
             
-            <!-- Chapter 4: Sampling Distributions -->
-            <div class="dataset-card" data-category="chapter4">
-                <h3>Sampling Distributions Demo</h3>
+            <!-- Dataset 1 -->
+            <div class="dataset-card" data-category="real-world">
+                <h3>Congressional Voting Records</h3>
                 <div class="dataset-tags">
-                    <span class="tag">Chapter 4</span>
-                    <span class="tag">CSV</span>
-                    <span class="tag">Simulation</span>
-                </div>
-                <p class="dataset-description">
-                    Simulated data demonstrating the Central Limit Theorem and properties of sampling distributions. 
-                    Contains samples from normal, uniform, and exponential populations with varying sample sizes.
-                </p>
-                <div class="dataset-meta">
-                    <div class="dataset-info">
-                        <div class="info-item"><strong>Rows:</strong> 1,000</div>
-                        <div class="info-item"><strong>Columns:</strong> 8</div>
-                        <div class="info-item"><strong>Size:</strong> 45 KB</div>
-                        <div class="info-item"><strong>Format:</strong> CSV</div>
-                    </div>
-                </div>
-                <a href="/datasets/Congressional_Voting_Records.csv" class="download-btn" download>Download CSV</a>
-            </div>
-
-            <!-- Chapter 5: Point Estimation -->
-            <div class="dataset-card" data-category="chapter5">
-                <h3>Estimation Methods Comparison</h3>
-                <div class="dataset-tags">
-                    <span class="tag">Chapter 5</span>
+                    <span class="tag">Political Science</span>
                     <span class="tag">CSV</span>
                     <span class="tag">Real Data</span>
                 </div>
                 <p class="dataset-description">
-                    Real-world data for comparing different point estimation methods including MLE, Method of Moments, 
-                    and unbiased estimators. Contains measurements from manufacturing quality control.
+                    Congressional voting records data from the U.S. House of Representatives. 
+                    Contains voting patterns on various issues for statistical analysis 
                 </p>
                 <div class="dataset-meta">
                     <div class="dataset-info">
-                        <div class="info-item"><strong>Rows:</strong> 500</div>
-                        <div class="info-item"><strong>Columns:</strong> 6</div>
-                        <div class="info-item"><strong>Size:</strong> 28 KB</div>
+                        <div class="info-item"><strong>Rows:</strong> 435</div>
+                        <div class="info-item"><strong>Columns:</strong> 17</div>
+                        <div class="info-item"><strong>Size:</strong> 32 KB</div>
                         <div class="info-item"><strong>Format:</strong> CSV</div>
                     </div>
                 </div>
-                <a href="point_estimation_data.csv" class="download-btn" download>Download CSV</a>
-            </div>
-
-            <!-- Chapter 6: Interval Estimation -->
-            <div class="dataset-card" data-category="chapter6">
-                <h3>Confidence Intervals Study</h3>
+                <a href="/datasets/Congressional_Voting_Records.csv" class="download-btn" download>Download CSV</a>
+            </div><
+            <!-- Austin Police Dataset -->
+<div class="dataset-card" data-category="real-world">
+    <h3>Austin Police Dataset</h3>
+    <div class="dataset-tags">
+        <span class="tag">YOUR CATEGORY</span>
+        <span class="tag">CSV</span>
+        <span class="tag">Real Data</span>
+    </div>
+    <p class="dataset-description">
+    Austin Police Department incident records from 2014-2024 containing 911-dispatched 
+        and officer-initiated events. Includes incident types, locations, timing, response 
+        details, and outcomes. Ideal for public safety analysis, geographic patterns, 
+        and statistical modeling of urban crime data.
+    </p>
+    <div class="dataset-meta">
+        <div class="dataset-info">
+            <div class="info-item"><strong>Rows:</strong> 000</div>
+            <div class="info-item"><strong>Columns:</strong> 00</div>
+            <div class="info-item"><strong>Size:</strong> 00 KB</div>
+            <div class="info-item"><strong>Format:</strong> CSV</div>
+        </div>
+    </div>
+    <a href="/datasets/APD.csv" class="download-btn" download>Download CSV</a>
+</div>
+            
+            <!-- Dataset 2 - Template for you to customize -->
+            <div class="dataset-card" data-category="statistical">
+                <h3>Your Dataset Name</h3>
                 <div class="dataset-tags">
-                    <span class="tag">Chapter 6</span>
+                    <span class="tag">Your Category</span>
                     <span class="tag">CSV</span>
-                    <span class="tag">Medical</span>
+                    <span class="tag">Your Type</span>
                 </div>
                 <p class="dataset-description">
-                    Medical statistics data for constructing and interpreting confidence intervals. 
-                    Includes patient measurements, treatment outcomes, and demographic information.
+                    Description of your dataset. What it contains, what it's used for, 
+                    and any important characteristics students should know about.
                 </p>
                 <div class="dataset-meta">
                     <div class="dataset-info">
-                        <div class="info-item"><strong>Rows:</strong> 750</div>
-                        <div class="info-item"><strong>Columns:</strong> 12</div>
-                        <div class="info-item"><strong>Size:</strong> 62 KB</div>
+                        <div class="info-item"><strong>Rows:</strong> X</div>
+                        <div class="info-item"><strong>Columns:</strong> Y</div>
+                        <div class="info-item"><strong>Size:</strong> Z KB</div>
                         <div class="info-item"><strong>Format:</strong> CSV</div>
                     </div>
                 </div>
-                <a href="medical_statistics.csv" class="download-btn" download>Download CSV</a>
+                <a href="/datasets/your_filename.csv" class="download-btn" download>Download CSV</a>
             </div>
 
-            <!-- Chapter 7: Hypothesis Testing -->
-            <div class="dataset-card" data-category="chapter7">
-                <h3>Hypothesis Testing Examples</h3>
+            <!-- Dataset 3 - Another template -->
+            <div class="dataset-card" data-category="simulation">
+                <h3>Another Dataset</h3>
                 <div class="dataset-tags">
-                    <span class="tag">Chapter 7</span>
+                    <span class="tag">Simulation</span>
                     <span class="tag">CSV</span>
-                    <span class="tag">A/B Testing</span>
+                    <span class="tag">Teaching</span>
                 </div>
                 <p class="dataset-description">
-                    A/B testing data for practicing various hypothesis testing procedures including t-tests, 
-                    chi-square tests, and ANOVA. Contains website conversion and user engagement metrics.
+                    Another dataset description. You can copy this template and modify it 
+                    for each dataset you want to add to your course.
                 </p>
                 <div class="dataset-meta">
                     <div class="dataset-info">
-                        <div class="info-item"><strong>Rows:</strong> 2,000</div>
-                        <div class="info-item"><strong>Columns:</strong> 10</div>
-                        <div class="info-item"><strong>Size:</strong> 95 KB</div>
+                        <div class="info-item"><strong>Rows:</strong> 1,000</div>
+                        <div class="info-item"><strong>Columns:</strong> 5</div>
+                        <div class="info-item"><strong>Size:</strong> 50 KB</div>
                         <div class="info-item"><strong>Format:</strong> CSV</div>
                     </div>
                 </div>
-                <a href="hypothesis_testing_data.csv" class="download-btn" download>Download CSV</a>
+                <a href="/datasets/another_dataset.csv" class="download-btn" download>Download CSV</a>
             </div>
 
-            <!-- Regression Analysis -->
-            <div class="dataset-card" data-category="chapter8">
-                <h3>Regression Analysis Dataset</h3>
-                <div class="dataset-tags">
-                    <span class="tag">Chapter 8</span>
-                    <span class="tag">CSV</span>
-                    <span class="tag">Economics</span>
-                </div>
-                <p class="dataset-description">
-                    Economic indicators and housing market data for linear regression modeling. 
-                    Includes variables for building multiple regression models and diagnostic analysis.
-                </p>
-                <div class="dataset-meta">
-                    <div class="dataset-info">
-                        <div class="info-item"><strong>Rows:</strong> 1,200</div>
-                        <div class="info-item"><strong>Columns:</strong> 15</div>
-                        <div class="info-item"><strong>Size:</strong> 85 KB</div>
-                        <div class="info-item"><strong>Format:</strong> CSV</div>
-                    </div>
-                </div>
-                <a href="regression_analysis.csv" class="download-btn" download>Download CSV</a>
-            </div>
-
-            <!-- Project Dataset -->
+            <!-- Dataset 4 - Project template -->
             <div class="dataset-card" data-category="projects">
-                <h3>Final Project Dataset</h3>
+                <h3>Project Dataset</h3>
                 <div class="dataset-tags">
                     <span class="tag">Project</span>
                     <span class="tag">CSV</span>
                     <span class="tag">Comprehensive</span>
                 </div>
                 <p class="dataset-description">
-                    Comprehensive dataset for final projects combining multiple statistical concepts. 
-                    Environmental data with missing values, outliers, and complex relationships for complete analysis.
+                    Dataset designed for course projects. Contains multiple variables 
+                    for comprehensive statistical analysis and modeling exercises.
                 </p>
                 <div class="dataset-meta">
                     <div class="dataset-info">
-                        <div class="info-item"><strong>Rows:</strong> 3,500</div>
-                        <div class="info-item"><strong>Columns:</strong> 20</div>
-                        <div class="info-item"><strong>Size:</strong> 180 KB</div>
+                        <div class="info-item"><strong>Rows:</strong> 2,500</div>
+                        <div class="info-item"><strong>Columns:</strong> 12</div>
+                        <div class="info-item"><strong>Size:</strong> 120 KB</div>
                         <div class="info-item"><strong>Format:</strong> CSV</div>
                     </div>
                 </div>
-                <a href="final_project_data.csv" class="download-btn" download>Download CSV</a>
-            </div>
-
-            <!-- Bayesian Analysis -->
-            <div class="dataset-card" data-category="chapter11">
-                <h3>Bayesian Analysis Examples</h3>
-                <div class="dataset-tags">
-                    <span class="tag">Chapter 11</span>
-                    <span class="tag">CSV</span>
-                    <span class="tag">Bayesian</span>
-                </div>
-                <p class="dataset-description">
-                    Prior and posterior analysis examples for Bayesian inference. 
-                    Contains conjugate prior examples and MCMC simulation results.
-                </p>
-                <div class="dataset-meta">
-                    <div class="dataset-info">
-                        <div class="info-item"><strong>Rows:</strong> 800</div>
-                        <div class="info-item"><strong>Columns:</strong> 9</div>
-                        <div class="info-item"><strong>Size:</strong> 42 KB</div>
-                        <div class="info-item"><strong>Format:</strong> CSV</div>
-                    </div>
-                </div>
-                <a href="bayesian_analysis.csv" class="download-btn" download>Download CSV</a>
-            </div>
-
-            <!-- Nonparametric Data -->
-            <div class="dataset-card" data-category="chapter12">
-                <h3>Nonparametric Testing Data</h3>
-                <div class="dataset-tags">
-                    <span class="tag">Chapter 12</span>
-                    <span class="tag">CSV</span>
-                    <span class="tag">Non-normal</span>
-                </div>
-                <p class="dataset-description">
-                    Non-normal and ordinal data for nonparametric statistical tests. 
-                    Includes rank-based test examples and bootstrap resampling scenarios.
-                </p>
-                <div class="dataset-meta">
-                    <div class="dataset-info">
-                        <div class="info-item"><strong>Rows:</strong> 600</div>
-                        <div class="info-item"><strong>Columns:</strong> 7</div>
-                        <div class="info-item"><strong>Size:</strong> 35 KB</div>
-                        <div class="info-item"><strong>Format:</strong> CSV</div>
-                    </div>
-                </div>
-                <a href="nonparametric_data.csv" class="download-btn" download>Download CSV</a>
+                <a href="/datasets/project_dataset.csv" class="download-btn" download>Download CSV</a>
             </div>
 
         </div>
@@ -506,10 +437,10 @@ permalink: /teaching/datasets/
                 Additional resources to help you work with the course datasets effectively.
             </p>
             <div class="doc-links">
-                <a href="data_dictionary.pdf" class="doc-link">Data Dictionary</a>
-                <a href="r_getting_started.pdf" class="doc-link">R Getting Started Guide</a>
-                <a href="data_analysis_templates.zip" class="doc-link">Analysis Templates</a>
-                <a href="dataset_codebook.pdf" class="doc-link">Codebook</a>
+                <a href="/datasets/data_dictionary.pdf" class="doc-link">Data Dictionary</a>
+                <a href="/datasets/r_getting_started.pdf" class="doc-link">R Getting Started Guide</a>
+                <a href="/datasets/data_analysis_templates.zip" class="doc-link">Analysis Templates</a>
+                <a href="/datasets/dataset_codebook.pdf" class="doc-link">Codebook</a>
             </div>
         </div>
     </div>
