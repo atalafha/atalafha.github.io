@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Datasets - MATH 3326</title>
+    <style>
+        :root {
+            --seu-blue: #003366;
+            --seu-light-blue: #1e4a72;
+            --seu-gold: #ffcc00;
+            --light-text: #ffffff;
+            --card-bg: rgba(255, 255, 255, 0.05);
+            --accent-color: #4a90e2;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, var(--seu-blue) 0%, var(--seu-light-blue) 100%);
+            color: var(--light-text);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
+
+        .header h1 {
+            color: var(--light-text);
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 300;
+        }
+
+        .nav-breadcrumb {
+            margin-bottom: 20px;
+        }
+
+        .nav-breadcrumb a {
+            color: var(--seu-gold);
+            text-decoration: none;
+            margin-right: 10px;
+        }
+
+        .nav-breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .search-filter {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 30px;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .search-input {
+            flex: 1;
+            min-width: 300px;
+            padding: 12px 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 25px;
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--light-text);
+            font-size: 1rem;
+        }
+
+        .search-input::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .filter-tags {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .filter-tag {
+            padding: 8px 16px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .filter-tag:hover,
+        .filter-tag.active {
+            background: var(--seu-gold);
+            color: var(--seu-blue);
+            border-color: var(--seu-gold);
+        }
+
+        .datasets-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .dataset-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 25px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .dataset-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+            border-color: var(--seu-gold);
+        }
+
+        .dataset-card h3 {
+            color: var(--light-text);
+            margin-bottom: 10px;
+            font-size: 1.4rem;
+            font-weight: 400;
+        }
+
+        .dataset-description {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .dataset-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .dataset-info {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .info-item {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .info-item strong {
+            color: var(--seu-gold);
+        }
+
+        .dataset-tags {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: rgba(116, 185, 255, 0.2);
+            color: #74b9ff;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            border: 1px solid rgba(116, 185, 255, 0.3);
+        }
+
+        .download-btn {
+            background: linear-gradient(45deg, var(--seu-gold), #e6b800);
+            color: var(--seu-blue);
+            padding: 10px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            display: inline-block;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .download-btn:hover {
+            background: linear-gradient(45deg, #e6b800, var(--seu-gold));
+            transform: scale(1.05);
+            color: var(--seu-blue);
+            text-decoration: none;
+        }
+
+        .documentation {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 30px;
+            margin-top: 30px;
+        }
+
+        .documentation h2 {
+            color: var(--light-text);
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--seu-gold);
+            padding-bottom: 10px;
+        }
+
+        .doc-links {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .doc-link {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--light-text);
+            padding: 12px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .doc-link:hover {
+            background: var(--accent-color);
+            color: white;
+            text-decoration: none;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .search-filter {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .search-input {
+                min-width: auto;
+            }
+            
+            .datasets-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .dataset-meta {
+                flex-direction: column;
+                gap: 10px;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation Breadcrumb -->
+        <div class="nav-breadcrumb">
+            <a href="../">Home</a> &gt; 
+            <a href="../teaching/">Teaching</a> &gt; 
+            <a href="../math3326-course/">MATH 3326</a> &gt; 
+            <span>Datasets</span>
+        </div>
+
+        <!-- Header -->
+        <div class="header">
+            <h1>Course Datasets</h1>
+            <p>MATH 3326: Introduction to Mathematical Statistics</p>
+        </div>
+
+        <!-- Search and Filter -->
+        <div class="search-filter">
+            <input type="text" class="search-input" placeholder="Search datasets by name or description..." id="searchInput">
+            <div class="filter-tags">
+                <div class="filter-tag active" data-filter="all">All</div>
+                <div class="filter-tag" data-filter="chapter4">Chapter 4</div>
+                <div class="filter-tag" data-filter="chapter5">Chapter 5</div>
+                <div class="filter-tag" data-filter="chapter6">Chapter 6</div>
+                <div class="filter-tag" data-filter="chapter7">Chapter 7</div>
+                <div class="filter-tag" data-filter="projects">Projects</div>
+            </div>
+        </div>
+
+        <!-- Datasets Grid -->
+        <div class="datasets-grid" id="datasetsGrid">
+            
+            <!-- Chapter 4: Sampling Distributions -->
+            <div class="dataset-card" data-category="chapter4">
+                <h3>Sampling Distributions Demo</h3>
+                <div class="dataset-tags">
+                    <span class="tag">Chapter 4</span>
+                    <span class="tag">CSV</span>
+                    <span class="tag">Simulation</span>
+                </div>
+                <p class="dataset-description">
+                    Simulated data demonstrating the Central Limit Theorem and properties of sampling distributions. 
+                    Contains samples from normal, uniform, and exponential populations with varying sample sizes.
+                </p>
+                <div class="dataset-meta">
+                    <div class="dataset-info">
+                        <div class="info-item"><strong>Rows:</strong> 1,000</div>
+                        <div class="info-item"><strong>Columns:</strong> 8</div>
+                        <div class="info-item"><strong>Size:</strong> 45 KB</div>
+                        <div class="info-item"><strong>Format:</strong> CSV</div>
+                    </div>
+                </div>
+                <a href="sampling_distributions.csv" class="download-btn" download>Download CSV</a>
+            </div>
+
+            <!-- Chapter 5: Point Estimation -->
+            <div class="dataset-card" data-category="chapter5">
+                <h3>Estimation Methods Comparison</h3>
+                <div class="dataset-tags">
+                    <span class="tag">Chapter 5</span>
+                    <span class="tag">CSV</span>
+                    <span class="tag">Real Data</span>
+                </div>
+                <p class="dataset-description">
+                    Real-world data for comparing different point estimation methods including MLE, Method of Moments, 
+                    and unbiased estimators. Contains measurements from manufacturing quality control.
+                </p>
+                <div class="dataset-meta">
+                    <div class="dataset-info">
+                        <div class="info-item"><strong>Rows:</strong> 500</div>
+                        <div class="info-item"><strong>Columns:</strong> 6</div>
+                        <div class="info-item"><strong>Size:</strong> 28 KB</div>
+                        <div class="info-item"><strong>Format:</strong> CSV</div>
+                    </div>
+                </div>
+                <a href="point_estimation_data.csv" class="download-btn" download>Download CSV</a>
+            </div>
+
+            <!-- Chapter 6: Interval Estimation -->
+            <div class="dataset-card" data-category="chapter6">
+                <h3>Confidence Intervals Study</h3>
+                <div class="dataset-tags">
+                    <span class="tag">Chapter 6</span>
+                    <span class="tag">CSV</span>
+                    <span class="tag">Medical</span>
+                </div>
+                <p class="dataset-description">
+                    Medical statistics data for constructing and interpreting confidence intervals. 
+                    Includes patient measurements, treatment outcomes, and demographic information.
+                </p>
+                <div class="dataset-meta">
+                    <div class="dataset-info">
+                        <div class="info-item"><strong>Rows:</strong> 750</div>
+                        <div class="info-item"><strong>Columns:</strong> 12</div>
+                        <div class="info-item"><strong>Size:</strong> 62 KB</div>
+                        <div class="info-item"><strong>Format:</strong> CSV</div>
+                    </div>
+                </div>
+                <a href="medical_statistics.csv" class="download-btn" download>Download CSV</a>
+            </div>
+
+            <!-- Chapter 7: Hypothesis Testing -->
+            <div class="dataset-card" data-category="chapter7">
+                <h3>Hypothesis Testing Examples</h3>
+                <div class="dataset-tags">
+                    <span class="tag">Chapter 7</span>
+                    <span class="tag">CSV</span>
+                    <span class="tag">A/B Testing</span>
+                </div>
+                <p class="dataset-description">
+                    A/B testing data for practicing various hypothesis testing procedures including t-tests, 
+                    chi-square tests, and ANOVA. Contains website conversion and user engagement metrics.
+                </p>
+                <div class="dataset-meta">
+                    <div class="dataset-info">
+                        <div class="info-item"><strong>Rows:</strong> 2,000</div>
+                        <div class="info-item"><strong>Columns:</strong> 10</div>
+                        <div class="info-item"><strong>Size:</strong> 95 KB</div>
+                        <div class="info-item"><strong>Format:</strong> CSV</div>
+                    </div>
+                </div>
+                <a href="hypothesis_testing_data.csv" class="download-btn" download>Download CSV</a>
+            </div>
+
+            <!-- Regression Analysis -->
+            <div class="dataset-card" data-category="chapter8">
+                <h3>Regression Analysis Dataset</h3>
+                <div class="dataset-tags">
+                    <span class="tag">Chapter 8</span>
+                    <span class="tag">CSV</span>
+                    <span class="tag">Economics</span>
+                </div>
+                <p class="dataset-description">
+                    Economic indicators and housing market data for linear regression modeling. 
+                    Includes variables for building multiple regression models and diagnostic analysis.
+                </p>
+                <div class="dataset-meta">
+                    <div class="dataset-info">
+                        <div class="info-item"><strong>Rows:</strong> 1,200</div>
+                        <div class="info-item"><strong>Columns:</strong> 15</div>
+                        <div class="info-item"><strong>Size:</strong> 85 KB</div>
+                        <div class="info-item"><strong>Format:</strong> CSV</div>
+                    </div>
+                </div>
+                <a href="regression_analysis.csv" class="download-btn" download>Download CSV</a>
+            </div>
+
+            <!-- Project Dataset -->
+            <div class="dataset-card" data-category="projects">
+                <h3>Final Project Dataset</h3>
+                <div class="dataset-tags">
+                    <span class="tag">Project</span>
+                    <span class="tag">CSV</span>
+                    <span class="tag">Comprehensive</span>
+                </div>
+                <p class="dataset-description">
+                    Comprehensive dataset for final projects combining multiple statistical concepts. 
+                    Environmental data with missing values, outliers, and complex relationships for complete analysis.
+                </p>
+                <div class="dataset-meta">
+                    <div class="dataset-info">
+                        <div class="info-item"><strong>Rows:</strong> 3,500</div>
+                        <div class="info-item"><strong>Columns:</strong> 20</div>
+                        <div class="info-item"><strong>Size:</strong> 180 KB</div>
+                        <div class="info-item"><strong>Format:</strong> CSV</div>
+                    </div>
+                </div>
+                <a href="final_project_data.csv" class="download-btn" download>Download CSV</a>
+            </div>
+
+            <!-- Bayesian Analysis -->
+            <div class="dataset-card" data-category="chapter11">
+                <h3>Bayesian Analysis Examples</h3>
+                <div class="dataset-tags">
+                    <span class="tag">Chapter 11</span>
+                    <span class="tag">CSV</span>
+                    <span class="tag">Bayesian</span>
+                </div>
+                <p class="dataset-description">
+                    Prior and posterior analysis examples for Bayesian inference. 
+                    Contains conjugate prior examples and MCMC simulation results.
+                </p>
+                <div class="dataset-meta">
+                    <div class="dataset-info">
+                        <div class="info-item"><strong>Rows:</strong> 800</div>
+                        <div class="info-item"><strong>Columns:</strong> 9</div>
+                        <div class="info-item"><strong>Size:</strong> 42 KB</div>
+                        <div class="info-item"><strong>Format:</strong> CSV</div>
+                    </div>
+                </div>
+                <a href="bayesian_analysis.csv" class="download-btn" download>Download CSV</a>
+            </div>
+
+            <!-- Nonparametric Data -->
+            <div class="dataset-card" data-category="chapter12">
+                <h3>Nonparametric Testing Data</h3>
+                <div class="dataset-tags">
+                    <span class="tag">Chapter 12</span>
+                    <span class="tag">CSV</span>
+                    <span class="tag">Non-normal</span>
+                </div>
+                <p class="dataset-description">
+                    Non-normal and ordinal data for nonparametric statistical tests. 
+                    Includes rank-based test examples and bootstrap resampling scenarios.
+                </p>
+                <div class="dataset-meta">
+                    <div class="dataset-info">
+                        <div class="info-item"><strong>Rows:</strong> 600</div>
+                        <div class="info-item"><strong>Columns:</strong> 7</div>
+                        <div class="info-item"><strong>Size:</strong> 35 KB</div>
+                        <div class="info-item"><strong>Format:</strong> CSV</div>
+                    </div>
+                </div>
+                <a href="nonparametric_data.csv" class="download-btn" download>Download CSV</a>
+            </div>
+
+        </div>
+
+        <!-- Documentation Section -->
+        <div class="documentation">
+            <h2>Documentation & Resources</h2>
+            <p style="margin-bottom: 20px; color: rgba(255, 255, 255, 0.8);">
+                Additional resources to help you work with the course datasets effectively.
+            </p>
+            <div class="doc-links">
+                <a href="data_dictionary.pdf" class="doc-link">Data Dictionary</a>
+                <a href="r_getting_started.pdf" class="doc-link">R Getting Started Guide</a>
+                <a href="data_analysis_templates.zip" class="doc-link">Analysis Templates</a>
+                <a href="dataset_codebook.pdf" class="doc-link">Codebook</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Search functionality
+        const searchInput = document.getElementById('searchInput');
+        const datasetsGrid = document.getElementById('datasetsGrid');
+        const filterTags = document.querySelectorAll('.filter-tag');
+
+        searchInput.addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase();
+            const cards = datasetsGrid.querySelectorAll('.dataset-card');
+            
+            cards.forEach(card => {
+                const title = card.querySelector('h3').textContent.toLowerCase();
+                const description = card.querySelector('.dataset-description').textContent.toLowerCase();
+                
+                if (title.includes(searchTerm) || description.includes(searchTerm)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+
+        // Filter functionality
+        filterTags.forEach(tag => {
+            tag.addEventListener('click', function() {
+                // Remove active class from all tags
+                filterTags.forEach(t => t.classList.remove('active'));
+                // Add active class to clicked tag
+                this.classList.add('active');
+                
+                const filterValue = this.getAttribute('data-filter');
+                const cards = datasetsGrid.querySelectorAll('.dataset-card');
+                
+                cards.forEach(card => {
+                    if (filterValue === 'all') {
+                        card.style.display = 'block';
+                    } else {
+                        const category = card.getAttribute('data-category');
+                        if (category === filterValue) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    }
+                });
+                
+                // Clear search when filtering
+                searchInput.value = '';
+            });
+        });
+
+        // Download tracking (optional)
+        document.querySelectorAll('.download-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const filename = this.getAttribute('href');
+                console.log(`Downloaded: ${filename}`);
+                // You could add analytics tracking here
+            });
+        });
+    </script>
+</body>
+</html>
