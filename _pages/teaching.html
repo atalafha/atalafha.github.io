@@ -6,165 +6,217 @@ author_profile: true
 ---
 
 <style>
-    /* Original table styles preserved */
+    /* St. Edward's University inspired color scheme */
+    :root {
+        --seu-blue: #003366;
+        --seu-light-blue: #1e4a72;
+        --seu-gold: #ffcc00;
+        --light-text: #ffffff;
+        --card-bg: rgba(255, 255, 255, 0.05);
+        --accent-color: #4a90e2;
+    }
+
+    body {
+        background: linear-gradient(135deg, var(--seu-blue) 0%, var(--seu-light-blue) 100%);
+        color: var(--light-text);
+        min-height: 100vh;
+    }
+
     table {
         width: 100%;
         border-collapse: collapse;
         margin: 20px 0;
         border-radius: 10px;
         overflow: hidden;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        background: rgba(255, 255, 255, 0.95);
+        color: #333;
     }
+    
     th, td {
         border: 1px solid #ddd;
         text-align: center;
         padding: 12px 8px;
     }
+    
     th {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        color: white;
+        background: linear-gradient(135deg, var(--seu-blue), var(--seu-light-blue));
+        color: var(--light-text);
         font-weight: 600;
+        font-size: 0.9rem;
     }
     
-    /* Enhanced color scheme */
+    /* Course-specific colors for schedule */
     .discrete-math {
-        background-color: #ffebee;
-        border-left: 4px solid #e91e63;
-    }
-    .applied-stats {
-        background-color: #fff3e0;
-        border-left: 4px solid #ff9800;
-    }
-    .calculus-lab, .calculus-class {
         background-color: #e3f2fd;
         border-left: 4px solid #2196f3;
+        color: #1565c0;
+        font-weight: 500;
     }
+    
+    .mathematical-stats {
+        background-color: #fff3e0;
+        border-left: 4px solid #ff9800;
+        color: #e65100;
+        font-weight: 500;
+    }
+    
     .office-hours {
         background-color: #f3e5f5;
         border-left: 4px solid #9c27b0;
-    }
-    .research {
-        background-color: #e8f5e8;
-        border-left: 4px solid #4caf50;
+        color: #7b1fa2;
+        font-weight: 500;
     }
 
-    /* New course sections styling */
+    /* Main content styling */
+    .semester-header {
+        text-align: center;
+        background: linear-gradient(135deg, var(--seu-blue), var(--seu-light-blue));
+        color: var(--light-text);
+        padding: 40px 20px;
+        border-radius: 15px;
+        margin: 30px 0;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .semester-header h1 {
+        margin: 0 0 10px 0;
+        font-size: 2.5rem;
+        font-weight: 300;
+        letter-spacing: 1px;
+    }
+
+    .semester-header p {
+        margin: 0;
+        font-size: 1.2rem;
+        opacity: 0.9;
+    }
+
     .course-section {
-        background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+        background: var(--card-bg);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
         border-radius: 15px;
         padding: 30px;
         margin: 30px 0;
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
     
     .course-section:hover {
         transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
     }
 
     .course-header {
         display: flex;
         align-items: center;
-        margin-bottom: 20px;
-        padding-bottom: 15px;
-        border-bottom: 3px solid #667eea;
-    }
-
-    .course-icon {
-        font-size: 2.5rem;
-        margin-right: 15px;
+        margin-bottom: 25px;
+        padding-bottom: 20px;
+        border-bottom: 2px solid var(--seu-gold);
     }
 
     .course-title {
-        color: #2c3e50;
+        color: var(--light-text);
         font-size: 1.8rem;
         margin: 0;
+        font-weight: 400;
+        letter-spacing: 0.5px;
     }
 
     .course-info {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         gap: 20px;
-        margin: 20px 0;
+        margin: 25px 0;
     }
 
     .info-card {
-        background: rgba(255, 255, 255, 0.8);
-        padding: 15px;
+        background: rgba(255, 255, 255, 0.08);
+        padding: 20px;
         border-radius: 10px;
-        border-left: 4px solid #667eea;
+        border-left: 4px solid var(--seu-gold);
+        backdrop-filter: blur(5px);
+    }
+
+    .info-card strong {
+        color: var(--seu-gold);
+        display: block;
+        margin-bottom: 5px;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .course-description {
+        background: rgba(255, 255, 255, 0.05);
+        padding: 20px;
+        border-radius: 10px;
+        margin: 20px 0;
+        line-height: 1.6;
+        border-left: 4px solid var(--accent-color);
     }
 
     .quick-links {
         display: flex;
         gap: 15px;
         flex-wrap: wrap;
-        margin-top: 20px;
+        margin-top: 25px;
     }
 
     .course-btn {
-        background: linear-gradient(45deg, #667eea, #764ba2);
-        color: white;
-        padding: 10px 20px;
+        background: linear-gradient(45deg, var(--seu-gold), #e6b800);
+        color: var(--seu-blue);
+        padding: 12px 24px;
         border-radius: 25px;
         text-decoration: none;
         font-weight: 600;
         transition: all 0.3s ease;
         display: inline-block;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
     }
 
     .course-btn:hover {
-        background: linear-gradient(45deg, #764ba2, #667eea);
+        background: linear-gradient(45deg, #e6b800, var(--seu-gold));
         transform: translateY(-2px);
-        box-shadow: 0 8px 15px rgba(102, 126, 234, 0.3);
-        color: white;
+        box-shadow: 0 8px 20px rgba(255, 204, 0, 0.3);
+        color: var(--seu-blue);
         text-decoration: none;
-    }
-
-    .semester-header {
-        text-align: center;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        color: white;
-        padding: 30px;
-        border-radius: 15px;
-        margin: 30px 0;
-    }
-
-    .semester-header h1 {
-        margin: 0;
-        font-size: 2.5rem;
     }
 
     .legend {
         display: flex;
         justify-content: center;
-        gap: 20px;
-        margin: 20px 0;
+        gap: 25px;
+        margin: 25px 0;
         flex-wrap: wrap;
     }
 
     .legend-item {
         display: flex;
         align-items: center;
-        gap: 8px;
-        padding: 8px 15px;
-        background: white;
-        border-radius: 20px;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        gap: 10px;
+        padding: 10px 20px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 25px;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
     }
 
     .legend-color {
-        width: 15px;
-        height: 15px;
-        border-radius: 3px;
+        width: 16px;
+        height: 16px;
+        border-radius: 4px;
     }
 
     .schedule-container {
-        background: white;
+        background: rgba(255, 255, 255, 0.95);
         border-radius: 15px;
         padding: 20px;
-        margin: 20px 0;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        margin: 25px 0;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
         overflow-x: auto;
     }
 
@@ -182,110 +234,96 @@ author_profile: true
             flex-direction: column;
             align-items: center;
         }
+
+        .semester-header h1 {
+            font-size: 2rem;
+        }
     }
 </style>
 
 <div class="semester-header">
-    <h1>📚 Teaching Portfolio</h1>
-    <p>Fall 2024 - Spring 2025</p>
+    <h1>Teaching Portfolio</h1>
+    <p>Fall 2025 • St. Edward's University</p>
 </div>
 
-<!-- MATH 3326: Mathematical Statistics -->
+<!-- MATH 3326: Introduction to Mathematical Statistics -->
 <div class="course-section">
     <div class="course-header">
-        <span class="course-icon">📊</span>
         <h2 class="course-title">MATH 3326: Introduction to Mathematical Statistics</h2>
     </div>
     
     <div class="course-info">
         <div class="info-card">
-            <strong>📅 Schedule:</strong> MWF 12:00-12:50 PM
+            <strong>Schedule</strong>
+            MWF 12:00-12:50 PM
         </div>
         <div class="info-card">
-            <strong>📍 Location:</strong> JBWS 374
+            <strong>Location</strong>
+            JBWS 363
         </div>
         <div class="info-card">
-            <strong>👥 Enrollment:</strong> 25 students
+            <strong>Course Number</strong>
+            MATH 3326-01 (40248)
         </div>
         <div class="info-card">
-            <strong>📖 Focus:</strong> Statistical theory, R programming, real-world applications
+            <strong>Credits</strong>
+            3.000
         </div>
     </div>
     
-    <p><strong>Course Description:</strong> An introduction to mathematical foundations of statistics, covering sampling distributions, estimation techniques, hypothesis testing, Bayesian inference, regression models, and nonparametric methods with extensive use of R programming.</p>
+    <div class="course-description">
+        <strong>Course Description:</strong> This course provides an introduction to the mathematical foundations of statistics, focusing on both theoretical development and practical application. Students will explore key concepts in sampling distributions, estimation techniques, hypothesis testing, Bayesian inference, regression models, and nonparametric methods. Emphasis is placed on developing statistical thinking through real and computer-generated data, utilizing computational tools such as R for simulations and interactive learning experiences.
+    </div>
     
     <div class="quick-links">
-        <a href="/math3326-course/" class="course-btn">📊 Course Website</a>
-        <a href="/datasets/" class="course-btn">📁 Datasets</a>
-        <a href="/syllabus/" class="course-btn">📋 Syllabus</a>
-        <a href="/assignments/" class="course-btn">📝 Assignments</a>
+        <a href="/math3326-course/" class="course-btn">Course Website</a>
+        <a href="/datasets/" class="course-btn">Datasets</a>
+        <a href="/syllabus/" class="course-btn">Syllabus</a>
+        <a href="/assignments/" class="course-btn">Assignments</a>
     </div>
 </div>
 
-<!-- MATH 2310: Discrete Mathematics -->
+<!-- MATH 2315: Discrete Mathematics -->
 <div class="course-section">
     <div class="course-header">
-        <span class="course-icon">🔢</span>
-        <h2 class="course-title">MATH 2310: Discrete Mathematics</h2>
+        <h2 class="course-title">MATH 2315: Discrete Mathematics</h2>
     </div>
     
     <div class="course-info">
         <div class="info-card">
-            <strong>📅 Schedule:</strong> TTh 9:30-10:45 AM
+            <strong>Section 01</strong>
+            TR 9:30-10:45 AM, JBWS 366
         </div>
         <div class="info-card">
-            <strong>👥 Enrollment:</strong> 30 students
+            <strong>Section 02</strong>
+            TR 2:00-3:15 PM, JBWS 268
         </div>
         <div class="info-card">
-            <strong>📖 Focus:</strong> Logic, proofs, set theory, combinatorics, graph theory
+            <strong>Course Numbers</strong>
+            Section 01 (40238), Section 02 (40239)
+        </div>
+        <div class="info-card">
+            <strong>Credits</strong>
+            3.000
         </div>
     </div>
     
-    <p><strong>Course Description:</strong> Fundamental concepts in discrete mathematics including mathematical reasoning, combinatorial analysis, discrete structures, graph theory, and their applications in computer science.</p>
+    <div class="course-description">
+        <strong>Course Description:</strong> Fundamental concepts in discrete mathematics including mathematical reasoning, combinatorial analysis, discrete structures, graph theory, and their applications in computer science. Topics include logic and proofs, set theory, functions, relations, counting principles, probability, graph theory, and trees.
+    </div>
     
     <div class="quick-links">
-        <a href="#" class="course-btn">📚 Course Materials</a>
-        <a href="#" class="course-btn">🧩 Problem Sets</a>
-        <a href="#" class="course-btn">📊 Progress Tracker</a>
-    </div>
-</div>
-
-<!-- MATH 1320: Calculus I -->
-<div class="course-section">
-    <div class="course-header">
-        <span class="course-icon">📐</span>
-        <h2 class="course-title">MATH 1320: Calculus I</h2>
-    </div>
-    
-    <div class="course-info">
-        <div class="info-card">
-            <strong>📅 Lecture:</strong> MWF 1:00-1:50 PM
-        </div>
-        <div class="info-card">
-            <strong>🧪 Lab:</strong> Th 12:30-2:00 PM
-        </div>
-        <div class="info-card">
-            <strong>👥 Enrollment:</strong> 28 students
-        </div>
-        <div class="info-card">
-            <strong>📖 Focus:</strong> Limits, derivatives, applications, introduction to integration
-        </div>
-    </div>
-    
-    <p><strong>Course Description:</strong> Introduction to differential calculus including limits, continuity, derivatives, and applications. Laboratory component focuses on computational techniques and real-world problem solving.</p>
-    
-    <div class="quick-links">
-        <a href="#" class="course-btn">📈 Graphing Tools</a>
-        <a href="#" class="course-btn">🔬 Lab Exercises</a>
-        <a href="#" class="course-btn">📊 Grade Calculator</a>
+        <a href="#" class="course-btn">Course Website</a>
+        <a href="#" class="course-btn">Problem Sets</a>
+        <a href="#" class="course-btn">Progress Tracker</a>
+        <a href="#" class="course-btn">Syllabus</a>
     </div>
 </div>
 
 <!-- Weekly Schedule Section -->
 <div class="course-section">
     <div class="course-header">
-        <span class="course-icon">🗓️</span>
-        <h2 class="course-title">Weekly Schedule - Fall 2024</h2>
+        <h2 class="course-title">Weekly Schedule - Fall 2025</h2>
     </div>
 
     <div class="legend">
@@ -294,20 +332,12 @@ author_profile: true
             <span>Discrete Mathematics</span>
         </div>
         <div class="legend-item">
-            <div class="legend-color applied-stats"></div>
-            <span>Applied Statistics</span>
-        </div>
-        <div class="legend-item">
-            <div class="legend-color calculus-class"></div>
-            <span>Calculus I</span>
+            <div class="legend-color mathematical-stats"></div>
+            <span>Mathematical Statistics</span>
         </div>
         <div class="legend-item">
             <div class="legend-color office-hours"></div>
             <span>Office Hours</span>
-        </div>
-        <div class="legend-item">
-            <div class="legend-color research"></div>
-            <span>Research</span>
         </div>
     </div>
 
@@ -322,51 +352,35 @@ author_profile: true
                 <th>Friday</th>
             </tr>
             <tr>
-                <td><strong>08:00 AM</strong></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td><strong>08:30 AM</strong></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
                 <td><strong>09:00 AM</strong></td>
                 <td></td>
                 <td></td>
                 <td></td>
-                <td class="discrete-math">Discrete Mathematics</td>
+                <td></td>
                 <td></td>
             </tr>
             <tr>
                 <td><strong>09:30 AM</strong></td>
                 <td></td>
-                <td class="discrete-math">Discrete Mathematics</td>
+                <td class="discrete-math">Discrete Math 01<br>JBWS 366</td>
                 <td></td>
-                <td class="discrete-math">Discrete Mathematics</td>
+                <td class="discrete-math">Discrete Math 01<br>JBWS 366</td>
                 <td></td>
             </tr>
             <tr>
                 <td><strong>10:00 AM</strong></td>
                 <td></td>
-                <td class="discrete-math">Discrete Mathematics</td>
+                <td class="discrete-math">Discrete Math 01<br>JBWS 366</td>
                 <td></td>
-                <td class="discrete-math">Discrete Mathematics</td>
+                <td class="discrete-math">Discrete Math 01<br>JBWS 366</td>
                 <td></td>
             </tr>
             <tr>
                 <td><strong>10:30 AM</strong></td>
                 <td></td>
-                <td class="discrete-math">Discrete Mathematics</td>
+                <td class="discrete-math">Discrete Math 01<br>JBWS 366</td>
                 <td></td>
-                <td></td>
+                <td class="discrete-math">Discrete Math 01<br>JBWS 366</td>
                 <td></td>
             </tr>
             <tr>
@@ -387,109 +401,98 @@ author_profile: true
             </tr>
             <tr>
                 <td><strong>12:00 PM</strong></td>
-                <td class="applied-stats">Applied Statistics</td>
+                <td class="mathematical-stats">Math Stats<br>JBWS 363</td>
                 <td></td>
-                <td class="applied-stats">Applied Statistics</td>
+                <td class="mathematical-stats">Math Stats<br>JBWS 363</td>
                 <td></td>
-                <td class="applied-stats">Applied Statistics</td>
+                <td class="mathematical-stats">Math Stats<br>JBWS 363</td>
             </tr>
             <tr>
                 <td><strong>12:30 PM</strong></td>
-                <td class="applied-stats">Applied Statistics</td>
+                <td class="mathematical-stats">Math Stats<br>JBWS 363</td>
                 <td></td>
-                <td class="applied-stats">Applied Statistics</td>
-                <td class="calculus-lab">Calculus I (Lab)</td>
-                <td class="applied-stats">Applied Statistics</td>
+                <td class="mathematical-stats">Math Stats<br>JBWS 363</td>
+                <td></td>
+                <td class="mathematical-stats">Math Stats<br>JBWS 363</td>
             </tr>
             <tr>
                 <td><strong>01:00 PM</strong></td>
-                <td class="calculus-class">Calculus I (Class)</td>
                 <td></td>
-                <td class="calculus-class">Calculus I (Class)</td>
-                <td class="calculus-lab">Calculus I (Lab)</td>
-                <td class="calculus-class">Calculus I (Class)</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
             </tr>
             <tr>
                 <td><strong>01:30 PM</strong></td>
-                <td class="calculus-class">Calculus I (Class)</td>
                 <td></td>
-                <td class="calculus-class">Calculus I (Class)</td>
-                <td class="calculus-lab">Calculus I (Lab)</td>
-                <td class="calculus-class">Calculus I (Class)</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
             </tr>
             <tr>
                 <td><strong>02:00 PM</strong></td>
                 <td class="office-hours">Office Hours</td>
-                <td></td>
+                <td class="discrete-math">Discrete Math 02<br>JBWS 268</td>
                 <td class="office-hours">Office Hours</td>
-                <td class="calculus-lab">Calculus I (Lab)</td>
-                <td class="research">Research</td>
+                <td class="discrete-math">Discrete Math 02<br>JBWS 268</td>
+                <td></td>
             </tr>
             <tr>
                 <td><strong>02:30 PM</strong></td>
                 <td class="office-hours">Office Hours</td>
-                <td></td>
+                <td class="discrete-math">Discrete Math 02<br>JBWS 268</td>
                 <td class="office-hours">Office Hours</td>
+                <td class="discrete-math">Discrete Math 02<br>JBWS 268</td>
                 <td></td>
-                <td class="research">Research</td>
             </tr>
             <tr>
                 <td><strong>03:00 PM</strong></td>
                 <td></td>
+                <td class="discrete-math">Discrete Math 02<br>JBWS 268</td>
                 <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td><strong>03:30 PM</strong></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td class="discrete-math">Discrete Math 02<br>JBWS 268</td>
                 <td></td>
             </tr>
             <tr>
-                <td><strong>04:00 PM</strong></td>
+                <td><strong>03:15 PM</strong></td>
                 <td></td>
+                <td class="discrete-math">Discrete Math 02<br>JBWS 268</td>
                 <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td><strong>04:30 PM</strong></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td class="discrete-math">Discrete Math 02<br>JBWS 268</td>
                 <td></td>
             </tr>
         </table>
     </div>
 </div>
 
-<!-- Office Hours & Contact -->
+<!-- Contact Information -->
 <div class="course-section">
     <div class="course-header">
-        <span class="course-icon">📞</span>
-        <h2 class="course-title">Office Hours & Contact</h2>
+        <h2 class="course-title">Office Hours & Contact Information</h2>
     </div>
     
     <div class="course-info">
         <div class="info-card">
-            <strong>🏢 Office:</strong> JBWS 374
+            <strong>Office</strong>
+            JBWS 374
         </div>
         <div class="info-card">
-            <strong>📧 Email:</strong> atalafha@stedwards.edu
+            <strong>Email</strong>
+            atalafha@stedwards.edu
         </div>
         <div class="info-card">
-            <strong>⏰ Office Hours:</strong> MW 2:00-3:00 PM, T 11:00 AM-12:00 PM
+            <strong>Office Hours</strong>
+            MW 2:00-3:00 PM, T 11:00 AM-12:00 PM
         </div>
         <div class="info-card">
-            <strong>📅 Appointments:</strong> Available by email arrangement
+            <strong>Semester</strong>
+            August 25 - December 11, 2025
         </div>
     </div>
     
-    <p><strong>Note:</strong> Feel free to email me to schedule appointments outside of regular office hours. I'm here to help you succeed!</p>
+    <div class="course-description">
+        <strong>Note:</strong> Office hours are available for all students across all courses. Additional appointments can be scheduled by email. I encourage students to visit during office hours for help with coursework, clarification of concepts, or academic guidance.
+    </div>
 </div>
