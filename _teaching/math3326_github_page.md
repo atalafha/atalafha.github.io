@@ -219,35 +219,6 @@ permalink: /teaching/MATH2315
         overflow-x: auto;
     }
 
-    .enrollment-stats {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 15px;
-        margin: 20px 0;
-    }
-
-    .stat-card {
-        background: rgba(255, 255, 255, 0.1);
-        padding: 15px;
-        border-radius: 8px;
-        text-align: center;
-        border: 1px solid rgba(255, 255, 255, 0.2);
-    }
-
-    .stat-number {
-        font-size: 1.8rem;
-        font-weight: 700;
-        color: var(--seu-gold);
-        display: block;
-    }
-
-    .stat-label {
-        font-size: 0.8rem;
-        opacity: 0.8;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-    }
-
     @media (max-width: 768px) {
         .course-info {
             grid-template-columns: 1fr;
@@ -298,8 +269,6 @@ permalink: /teaching/MATH2315
             3.000
         </div>
     </div>
-
-
     
     <div class="course-description">
         <strong>Course Description:</strong> This course provides an introduction to the mathematical foundations of statistics, focusing on both theoretical development and practical application. Students will explore key concepts in sampling distributions, estimation techniques, hypothesis testing, Bayesian inference, regression models, and nonparametric methods. Emphasis is placed on developing statistical thinking through real and computer-generated data, utilizing computational tools such as R for simulations and interactive learning experiences.
@@ -510,7 +479,7 @@ permalink: /teaching/MATH2315
         </div>
         <div class="info-card">
             <strong>Email</strong>
-            atalafha
+            atalafha@stedwards.edu
         </div>
         <div class="info-card">
             <strong>Office Hours</strong>
